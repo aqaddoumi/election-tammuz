@@ -1,0 +1,118 @@
+{
+  "kind": "collectionType",
+  "collectionName": "observers",
+  "info": {
+    "name": "observer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "fatherName": {
+      "type": "string"
+    },
+    "grandfatherName": {
+      "type": "string"
+    },
+    "dateOfBirth": {
+      "type": "date"
+    },
+    "firstPhoneNumber": {
+      "type": "biginteger"
+    },
+    "secondPhoneNumber": {
+      "type": "biginteger"
+    },
+    "email": {
+      "type": "email"
+    },
+    "sex": {
+      "type": "string"
+    },
+    "governante": {
+      "type": "string"
+    },
+    "constituency": {
+      "type": "string"
+    },
+    "didYouMonitorBefore": {
+      "type": "string"
+    },
+    "doYouHaveSmartphone": {
+      "type": "string"
+    },
+    "whichAppsDoYouUse": {
+      "type": "string"
+    },
+    "howIsTheConnection": {
+      "type": "string"
+    },
+    "personalPicture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "nationalIdPicture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "residencyPicture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "rationPicture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "electoralNumber": {
+      "type": "integer"
+    },
+    "availableForTraining": {
+      "type": "string"
+    },
+    "availableForRemoteTraining": {
+      "type": "string"
+    },
+    "availableForObserving": {
+      "type": "string"
+    }
+  }
+}
