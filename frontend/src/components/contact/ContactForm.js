@@ -8,6 +8,7 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
+import Link from '@material-ui/core/Link';
 
 import Alert from '../layout/Alert';
 import FormTextField from '../form/FormTextField';
@@ -194,7 +195,11 @@ const ContactForm = ({ contact, sendContact, removeAllAlerts, setAlert }) => {
               </Typography>
             </Grid>
             <Grid item xs={12}>
-              <Typography align='center'>tammuzftsd@yahoo.com</Typography>
+              <Typography align='center'>
+              <Link href="mailto:tammuzftsd@yahoo.com">
+            tammuzftsd@yahoo.com
+          </Link>
+              </Typography>
             </Grid>
           </Grid>
 

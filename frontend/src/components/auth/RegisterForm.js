@@ -216,14 +216,14 @@ const RegisterForm = ({
         <Grid item xs={12} md={6}>
           <Grid container justify='center'>
             <Typography className={classes.title} color='primary'>
-              إنشاء حساب جديد
+              تسجيل المراقبين والمراقبات
             </Typography>
           </Grid>
 
           <form onSubmit={(e) => onSubmit(e)}>
 
             <FormTextField
-              label='رقم الناخب(ـة):'
+              label='رقم الناخب(ـة):*'
               placeholder='رقم الناخب(ـة)'
               name='electoralNumber'
               onChange={onChange}
@@ -232,7 +232,7 @@ const RegisterForm = ({
             />
 
             <FormTextField
-              label='الاسم الأول:'
+              label='الاسم الأول:*'
               placeholder='الاسم الأول'
               name='firstName'
               onChange={onChange}
@@ -241,7 +241,7 @@ const RegisterForm = ({
             />
 
             <FormTextField
-              label='اسم الأب:'
+              label='اسم الأب:*'
               placeholder='اسم الأب'
               name='fatherName'
               onChange={onChange}
@@ -250,7 +250,7 @@ const RegisterForm = ({
             />
 
             <FormTextField
-              label='اسم الجد:'
+              label='اسم الجد:*'
               placeholder='اسم الجد'
               name='grandfatherName'
               onChange={onChange}
@@ -259,7 +259,7 @@ const RegisterForm = ({
             />
 
             <FormDropDownField
-              label='الجنس'
+              label='الجنس:*'
               name='sex'
               onChange={onChange}
               errorText='الرجاء اختيار الجنس'
@@ -270,7 +270,7 @@ const RegisterForm = ({
             </FormDropDownField>
 
             <FormDateField
-              label='تاريخ الميلاد'
+              label='تاريخ الميلاد:*'
               name='dateOfBirth'
               onChange={onChange}
               errorText='الرجاء اختيار تاريخ ميلاد صحيح'
@@ -278,7 +278,7 @@ const RegisterForm = ({
             />
 
             <FormTextField
-              label='رقم الهاتف ١:'
+              label='رقم الهاتف ١:*'
               placeholder='رقم الهاتف ١'
               name='firstPhoneNumber'
               onChange={onChange}
@@ -296,7 +296,7 @@ const RegisterForm = ({
             />
 
             <FormTextField
-              label='البريدالإلكتروني:'
+              label='البريدالإلكتروني:*'
               placeholder='البريد الإلكتروني'
               name='email'
               onChange={onChange}
@@ -313,7 +313,7 @@ const RegisterForm = ({
             ></FormGovernanteFields>
 
             <FormDropDownField
-              label='هل سبق وأن راقبت الانتخابات من قبل؟'
+              label='هل سبق وأن راقبت الانتخابات من قبل؟*'
               name='didYouMonitorBefore'
               onChange={onChange}
               errorText='الرجاء اختيار أحد الخيارات'
@@ -326,7 +326,7 @@ const RegisterForm = ({
             </FormDropDownField>
 
             <FormDropDownField
-              label='هل لديك هاتف محمول ذكي؟'
+              label='هل لديك هاتف محمول ذكي؟*'
               name='doYouHaveSmartphone'
               onChange={onChange}
               errorText='الرجاء اختيار أحد الخيارات'
@@ -338,7 +338,7 @@ const RegisterForm = ({
             </FormDropDownField>
 
             <FormDropDownField
-              label='ما هي تطبيقات المراسلة التي يتم استخدمها بشكل عام؟'
+              label='ما هي تطبيقات المراسلة التي يتم استخدمها بشكل عام؟*'
               name='whichAppsDoYouUse'
               onChange={onChange}
               errorText='الرجاء اختيار أحد الخيارات'
@@ -352,7 +352,7 @@ const RegisterForm = ({
             </FormDropDownField>
 
             <FormDropDownField
-              label='كيف تقيم(ين) تغطية الإنترنت وشبكة المحمول في منطقتك؟'
+              label='كيف تقيم(ين) تغطية الإنترنت وشبكة المحمول في منطقتك؟*'
               name='howIsTheConnection'
               onChange={onChange}
               errorText='الرجاء اختيار أحد الخيارات'
@@ -365,7 +365,7 @@ const RegisterForm = ({
             </FormDropDownField>
 
             <FormDropDownField
-              label='هل أنت على استعداد لحضور جلسة تدريبية فعلية عن مراقبة الانتخابات مع منظمة تموز؟'
+              label='هل أنت على استعداد لحضور جلسة تدريبية فعلية عن مراقبة الانتخابات مع منظمة تموز؟*'
               name='availableForTraining'
               onChange={onChange}
               errorText='الرجاء اختيار أحد الخيارات'
@@ -376,7 +376,7 @@ const RegisterForm = ({
             </FormDropDownField>
 
             <FormDropDownField
-              label='هل أنت على استعداد لحضور جلسة تدريبية عن مراقبة الانتخابات مع منظمة تموز عبر الإنترنت؟'
+              label='هل أنت على استعداد لحضور جلسة تدريبية عن مراقبة الانتخابات مع منظمة تموز عبر الإنترنت؟*'
               name='availableForRemoteTraining'
               onChange={onChange}
               errorText='الرجاء اختيار أحد الخيارات'
@@ -387,7 +387,7 @@ const RegisterForm = ({
             </FormDropDownField>
 
             <FormDropDownField
-              label='هل أنت على استعداد لمراقبة يوم الاقتراع والحضور من الساعة ٦ صباحاً ولغاية انتهاء العد والفرز؟'
+              label='هل أنت على استعداد لمراقبة يوم الاقتراع والحضور من الساعة ٦ صباحاً ولغاية انتهاء العد والفرز؟*'
               name='availableForObserving'
               onChange={onChange}
               errorText='الرجاء اختيار أحد الخيارات'
@@ -398,38 +398,38 @@ const RegisterForm = ({
             </FormDropDownField>
 
             <FormUploadField
-              label="صورة شخصية (صورة معاملات)"
+              label="صورة شخصية (صورة معاملات):*"
               name='personalPicture'
               onChange={onImageChange}
               isError={errors.personalPicture}
-              errorText='الرجاء رفع الصورة الشخصية'
+              errorText='الرجاء تحميل الصورة الشخصية'
             ></FormUploadField>
 
             <FormUploadField
-              label="صورة عن هوية الأحوال المدنية أو البطاقة الوطنية"
+              label="صورة عن هوية الأحوال المدنية أو البطاقة الوطنية:*"
               name='nationalIdPicture'
               onChange={onImageChange}
               isError={errors.nationalIdPicture}
-              errorText='الرجاء رفع صورة عن هوية الأحوال المدنية'
+              errorText='الرجاء تحميل صورة عن هوية الأحوال المدنية'
             ></FormUploadField>
 
             <FormUploadField
-              label="صورة عن بطاقة السكن"
+              label="صورة عن بطاقة السكن:*"
               name='residencyPicture'
               onChange={onImageChange}
               isError={errors.residencyPicture}
-              errorText='الرجاء رفع صورة عن بطاقة السكن'
+              errorText='الرجاء تحميل صورة عن بطاقة السكن'
             ></FormUploadField>
 
             <FormUploadField
-              label="صورة من البطاقة التموينية"
+              label="صورة من البطاقة التموينية:*"
               name='rationPicture'
               onChange={onImageChange}
               isError={errors.rationPicture}
-              errorText='الرجاء رفع صورة عن البطاقة التموينية'
+              errorText='الرجاء تحميل صورة عن البطاقة التموينية'
             ></FormUploadField>
 
-            <FormSubmitButton label='إنشاء حساب جديد' />
+            <FormSubmitButton label='التسجيل' />
 
             <Grid container justify='center'>
               <Box className={classes.alert}>

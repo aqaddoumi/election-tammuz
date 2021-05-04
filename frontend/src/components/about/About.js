@@ -5,6 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
+import Link from '@material-ui/core/Link';
+import TammuzLogo from '../logos/TammuzLogo';
 
 const useStyles = makeStyles((theme) => ({
   aboutImage: {
@@ -17,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontSize: 20,
-    margin: theme.spacing(0, 5, 5, 5),
+    margin: theme.spacing(0, 5, 0, 5),
   },
   paragraph: {
     fontWeight: 300,
@@ -53,6 +55,8 @@ const About = () => {
           <Typography justify='center' align='center' className={classes.title}>
           منظمة تموز للتنمية الاجتماعية
           </Typography>
+
+          <TammuzLogo></TammuzLogo>
 
           <Typography className={classes.paragraph}>
           الهوية: منظمة تختص بالتنمية الاجتماعية والحقوق والحريات.
@@ -127,19 +131,40 @@ const About = () => {
           </Typography>
 
           <Typography className={classes.paragraph}>
-          البريد الإلكتروني: tammuzftsd@yahoo.com
+          البريد الإلكتروني: &#160;
+          <Link href="mailto:tammuzftsd@yahoo.com">
+            tammuzftsd@yahoo.com
+          </Link>
           </Typography>
 
           <Typography className={classes.paragraph}>
-          الموقع الإلكتروني:  www.tammuz.org 
+          الموقع الإلكتروني:&#160;
+          <Link href="http://www.tammuz.org" target="_blank">
+          www.tammuz.org 
+          </Link>
+
           </Typography>
 
           <Typography className={classes.paragraph}>
-          صفحة الفيسبوك:  Organization TOSD tammuz
+          صفحة الفيسبوك:  &#160;
+          <Link href="https://www.facebook.com/tammuz.organization.TOSD/" target="_blank">
+          Organization TOSD tammuz
+          </Link>
+          
           </Typography>
 
+
           <Typography className={classes.paragraph}>
-          هواتف الاتصال: 009647704619000 - 009647702524249  
+          هواتف الاتصال: &#160; 
+
+
+          <Link href="tel:009647702524249" target="_blank">
+          009647702524249 
+          </Link>
+          &#160;-&#160;   
+          <Link href="tel:009647704619000" target="_blank">
+          009647704619000
+          </Link>
           </Typography>
 
           

@@ -103,7 +103,7 @@ const FormGovernanteFields = ({
   return (
     <Fragment>
       <FormDropDownField
-        label='المحافظة التي تسكن(ين) فيها'
+        label='المحافظة:*'
         name='governante'
         onChange={(e) => handleGovernanteChange(e)}
         errorText={errorTextGovernante}
@@ -130,7 +130,7 @@ const FormGovernanteFields = ({
       </FormDropDownField>
 
       <FormDropDownField
-        label='المحافظة التي تسكن(ين) فيها'
+        label='الدائرة الانتخابية:*'
         name='constituency'
         onChange={(e) => handleChange(e)}
         errorText={errorTextConstituency}

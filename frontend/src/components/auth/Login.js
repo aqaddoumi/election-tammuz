@@ -110,21 +110,21 @@ const Login = ({ setAlert, removeAllAlerts, login }) => {
       </Grid>
       <form onSubmit={(e) => onSubmit(e)}>
         <FormTextField
-          label='رقم الهاتف'
-          placeholder='رقم الهاتف'
+          label='اسم المسخدم(ـة):'
+          placeholder='اسم المسخدم(ـة)'
           name='identifier'
           onChange={onChange}
           isError={errors.identifier}
-          errorText='الرجاء تعبئة خانة رقم الهاتف'
+          errorText='الرجاء تعبئة خانة اسم المسخدم(ـة)'
         />
 
         <FormTextField
-          label='رقم الناخب(ـة):'
-          placeholder='رقم الناخب(ـة)'
+          label='كلمة السر:'
+          placeholder='كلمة السر'
           name='password'
           onChange={onChange}
           isError={errors.password}
-          errorText='الرجاء تعبئة خانة رقم الناخب(ـة)'
+          errorText='الرجاء تعبئة خانة كلمة السر'
         />
 
         <FormSubmitButton label='تسجيل دخول' />
@@ -139,7 +139,7 @@ const Login = ({ setAlert, removeAllAlerts, login }) => {
               color='primary'
               variant='outlined'
             >
-              إنشاء حساب جديد
+              تسجيل المراقبين والمراقبات
             </Button>
         </Grid>
       </Box>

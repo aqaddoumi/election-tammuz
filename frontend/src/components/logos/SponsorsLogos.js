@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
   },
   copyright: {
+    marginTop: '10px',
     fontSize: 12,
     color: '#616161',
   },
@@ -37,7 +38,7 @@ const SponsorsLogos = () => {
           &#xa9; جميع الحقوق محفوظة لمنظمة تموز.
         </Typography>
         <Typography className={classes.copyright} align='center'>
-          هذه المنصة من تصميم وتطوير محمد خصاونة وعادل قدومي.
+          هذه المنصة من تصميم وتطوير عادل قدومي وشركة تناظر للاستشارات.
         </Typography>
       </Grid>
     </Grid>

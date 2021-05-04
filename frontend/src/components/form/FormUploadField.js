@@ -35,13 +35,13 @@ const FormSubmitButton = ({
 
   const [error, setError] = useState(false);
   const [helperText, setHelperText] = useState('');
-  const [buttonLabel, setButtonLabel] = useState('رفع الصورة')
+  const [buttonLabel, setButtonLabel] = useState('تحميل الصورة')
   const [buttonVariant, setButtonVariant] = useState('outlined')
 
   const handleChange = (e) => {
     if (e.target.files.length > 0) {
       setButtonVariant('contained')
-      setButtonLabel('تم رفع الصورة')
+      setButtonLabel('تم تحميل الصورة')
       setError(false);
       setHelperText('');
       onChange(e);
