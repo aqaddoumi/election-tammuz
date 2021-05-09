@@ -7,12 +7,12 @@ import logo from '../../assets/logo.png';
 const useStyles = makeStyles((theme) => ({
   logo: {
     [theme.breakpoints.down('xs')]: {
-      maxHeight: '5vh',
+      maxHeight: '12vh',
       width: '100%',
     },
     width: '100%',
     height: 'auto',
-    maxHeight: '10vh',
+    maxHeight: '12vh',
     textAlign: 'center',
   },
 }));

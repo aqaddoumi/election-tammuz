@@ -110,12 +110,12 @@ const Login = ({ setAlert, removeAllAlerts, login }) => {
       </Grid>
       <form onSubmit={(e) => onSubmit(e)}>
         <FormTextField
-          label='اسم المسخدم(ـة):'
-          placeholder='اسم المسخدم(ـة)'
+          label='اسم المستخدم(ـة):'
+          placeholder='اسم المستخدم(ـة)'
           name='identifier'
           onChange={onChange}
           isError={errors.identifier}
-          errorText='الرجاء تعبئة خانة اسم المسخدم(ـة)'
+          errorText='الرجاء تعبئة خانة اسم المستخدم(ـة)'
         />
 
         <FormTextField

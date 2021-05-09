@@ -16,7 +16,7 @@ import mainImage from '../../assets/main-image.jpg';
 
 const useStyles = makeStyles((theme) => ({
   main: {
-    height: '87vh',
+    height: '85vh',
   },
   sideImage: {
     backgroundRepeat: 'no-repeat',
