@@ -35,7 +35,7 @@ const SponsorsLogos = () => {
       <Grid item xs={12}>
         <CardMedia component='img' image={logos} className={classes.logo} />
         <Typography className={classes.copyright} align='center'>
-          &#xa9; جميع الحقوق محفوظة لمنظمة تموز.
+          &#xa9; جميع الحقوق محفوظة.
         </Typography>
         <Typography className={classes.copyright} align='center'>
           هذه المنصة من تصميم وتطوير عادل قدومي وشركة تناظر للاستشارات.
