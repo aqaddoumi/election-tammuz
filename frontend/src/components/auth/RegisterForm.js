@@ -58,6 +58,7 @@ const RegisterForm = ({
     firstName: '',
     fatherName: '',
     grandfatherName: '',
+    familyNumber: '',
     sex: '',
     dateOfBirth: '',
     firstPhoneNumber: '',
@@ -74,6 +75,7 @@ const RegisterForm = ({
     availableForObserving: '',
     personalPicture: '',
     nationalIdPicture: '',
+    nationalIdBackPicture: '',
     residencyPicture: '',
     rationPicture: '',
   });
@@ -83,6 +85,7 @@ const RegisterForm = ({
     firstName,
     fatherName,
     grandfatherName,
+    familyNumber,
     sex,
     dateOfBirth,
     firstPhoneNumber,
@@ -99,6 +102,7 @@ const RegisterForm = ({
     availableForObserving,
     personalPicture,
     nationalIdPicture,
+    nationalIdBackPicture,
     residencyPicture,
     rationPicture,
   } = formData;
@@ -129,7 +133,7 @@ const RegisterForm = ({
 
     for (const err in errors) {
       if (formData[err] === '') {
-        if (err !== "secondPhoneNumber") {
+        if (err !== "secondPhoneNumber" && err !== 'familyNumber') {
           isAnyErrors = true;
           newErrors[err] = true;
         }
@@ -184,6 +188,7 @@ const RegisterForm = ({
         firstName,
         fatherName,
         grandfatherName,
+        familyNumber,
         sex,
         dateOfBirth,
         firstPhoneNumber,
@@ -200,14 +205,15 @@ const RegisterForm = ({
         availableForObserving,
         personalPicture,
         nationalIdPicture,
+        nationalIdBackPicture,
         residencyPicture,
         rationPicture,
       });
     }
   };
 
-  if (observer.success) {
-    return <Redirect to='/register/success' />;
+  if (observer.waiting) {
+    return <Redirect to='/register/waiting' />;
   }
 
   return (
@@ -256,6 +262,15 @@ const RegisterForm = ({
               onChange={onChange}
               isError={errors.grandfatherName}
               errorText='الرجاء تعبئة خانة اسم الجد'
+            />
+
+            <FormTextField
+              label='رقم العائلة:'
+              placeholder='رقم العائلة'
+              name='familyNumber'
+              onChange={onChange}
+              isError={errors.familyNumber}
+              errorText='الرجاء تعبئة خانة رقم العائلة'
             />
 
             <FormDropDownField
@@ -406,10 +421,18 @@ const RegisterForm = ({
             ></FormUploadField>
 
             <FormUploadField
-              label="صورة عن هوية الأحوال المدنية أو البطاقة الوطنية:*"
+              label="صورة عن هوية الأحوال المدنية أو البطاقة الوطنية - صورة أمامية:*"
               name='nationalIdPicture'
               onChange={onImageChange}
               isError={errors.nationalIdPicture}
+              errorText='الرجاء تحميل صورة عن هوية الأحوال المدنية'
+            ></FormUploadField>
+
+            <FormUploadField
+              label="صورة عن هوية الأحوال المدنية أو البطاقة الوطنية - صورة خلفية:*"
+              name='nationalIdBackPicture'
+              onChange={onImageChange}
+              isError={errors.nationalIdBackPicture}
               errorText='الرجاء تحميل صورة عن هوية الأحوال المدنية'
             ></FormUploadField>
 

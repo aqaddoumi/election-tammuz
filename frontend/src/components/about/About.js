@@ -7,6 +7,9 @@ import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
 import Link from '@material-ui/core/Link';
 import TammuzLogo from '../logos/TammuzLogo';
+import { Fragment } from 'react';
+import { CircularProgress } from '@material-ui/core';
+import SponsorsLogos from '../logos/SponsorsLogos';
 
 const useStyles = makeStyles((theme) => ({
   aboutImage: {
@@ -44,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 3,
   },
 }));
+
 
 const About = () => {
   const classes = useStyles();

@@ -4,6 +4,7 @@ import { api } from '../api';
 import { setAlert } from './alert';
 
 import {
+  REGISTER_OBSERVER_WAITING,
   REGISTER_OBSERVER_SUCCESS,
   REGISTER_OBSERVER_FAIL,
   REGISTER_OBSERVER_REDIRECTED,
@@ -14,6 +15,7 @@ export const registerObserver = ({
   firstName,
   fatherName,
   grandfatherName,
+  familyNumber,
   sex,
   dateOfBirth,
   firstPhoneNumber,
@@ -30,6 +32,7 @@ export const registerObserver = ({
   availableForObserving,
   personalPicture,
   nationalIdPicture,
+  nationalIdBackPicture,
   residencyPicture,
   rationPicture,
 }) => async (dispatch) => {
@@ -46,6 +49,7 @@ export const registerObserver = ({
 
   formData.append(`files.personalPicture`, personalPicture, personalPicture.name);
   formData.append(`files.nationalIdPicture`, nationalIdPicture, nationalIdPicture.name);
+  formData.append(`files.nationalIdBackPicture`, nationalIdBackPicture, nationalIdBackPicture.name);
   formData.append(`files.residencyPicture`, residencyPicture, residencyPicture.name);
   formData.append(`files.rationPicture`, rationPicture, rationPicture.name);
 
@@ -54,6 +58,7 @@ export const registerObserver = ({
   data.firstName = firstName
   data.fatherName = fatherName
   data.grandfatherName = grandfatherName
+  data.familyNumber = familyNumber
   data.sex = sex
   data.dateOfBirth = dateOfBirth
   data.firstPhoneNumber = firstPhoneNumber
@@ -72,6 +77,10 @@ export const registerObserver = ({
   formData.append('data', JSON.stringify(data));
 
   try {
+    dispatch({
+      type: REGISTER_OBSERVER_WAITING,
+    })
+
     await axios.post(api('/observers'), formData, config);
 
     dispatch({

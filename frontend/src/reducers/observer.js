@@ -1,4 +1,5 @@
 import {
+    REGISTER_OBSERVER_WAITING,
     REGISTER_OBSERVER_SUCCESS,
     REGISTER_OBSERVER_FAIL,
     REGISTER_OBSERVER_REDIRECTED
@@ -10,8 +11,10 @@ import {
     const { type } = action;
   
     switch (type) {
+      case REGISTER_OBSERVER_WAITING:
+        return { ...state, waiting: true };
       case REGISTER_OBSERVER_SUCCESS:
-        return { ...state, success: true };
+        return { ...state, waiting: false, success: true };
       case REGISTER_OBSERVER_REDIRECTED:
         return (state = {});
       case REGISTER_OBSERVER_FAIL:
