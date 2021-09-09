@@ -47,7 +47,7 @@ const RegisterWaiting = ({ observer, registerObserverRedirected }) => {
     <Fragment>
     <Grid container justify='center'>
       <Typography align='center' className={classes.title} color='primary'>
-        الرجاء انتظار تحميل المعلومات والصور
+        الرجاء الانتظار قليلاً حيث سيحتاج تحميل الملفات إلى بعض الوقت حسب سرعة الانترنت.
       </Typography>
       <Grid container justify="center" xs={12} >
         <CircularProgress className={classes.progress} color="primary"/>
