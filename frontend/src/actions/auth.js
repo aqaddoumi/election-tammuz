@@ -15,7 +15,7 @@ import {
 export const loadUser = () => async (dispatch) => {
   try {
     const id = jwt.decode(localStorage.jwt).id;
-    const res = await axios.get(api(`/users/${id}`));
+    const res = await axios.get(api(`/users/me`));
 
     dispatch({
       type: USER_LOADED,

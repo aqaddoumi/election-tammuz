@@ -122,6 +122,7 @@ const Login = ({ setAlert, removeAllAlerts, login }) => {
           label='كلمة السر:'
           placeholder='كلمة السر'
           name='password'
+          type='password'
           onChange={onChange}
           isError={errors.password}
           errorText='الرجاء تعبئة خانة كلمة السر'
