@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontSize: 20,
-    margin: theme.spacing(0, 5, 5, 5),
+    margin: theme.spacing(0, 5, 2, 5),
   },
   paragraph: {
     fontWeight: 300,
@@ -48,11 +48,62 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+
 const HowTo = () => {
   const classes = useStyles();
 
   return (
     <Fragment>
+      <Grid className={classes.container} container justify='center'>
+        <Grid item xs={12}>
+          <Grid container justify='center' className={classes.videoContainer}>
+            <Grid item xs={12} sm={8} md={6}>
+              <Typography
+                  align='center'
+                  className={classes.title}
+                  color='primary'
+                >
+                  مراقبة يوم الاقتراع وخطة العمل
+              </Typography>
+
+              <div className={classes.videoWrapper}>
+                <ReactPlayer
+                  controls={true}
+                  className={classes.video}
+                  url="https://youtu.be/JPJREmANESY"
+                  width='100%'
+                  height='100%'
+                />
+              </div>
+            </Grid>
+          </Grid>
+        </Grid>
+
+        <Grid item xs={12}>
+          <Grid container justify='center' className={classes.videoContainer}>
+            <Grid item xs={12} sm={8} md={6}>
+              <Typography
+                  align='center'
+                  className={classes.title}
+                  color='primary'
+                >
+                التطبيق الإلكتروني لمراقبة يوم الاقتراع
+              </Typography>
+
+              <div className={classes.videoWrapper}>
+                <ReactPlayer
+                  controls={true}
+                  className={classes.video}
+                  url="https://youtu.be/Cazht8K0L9A"
+                  width='100%'
+                  height='100%'
+                />
+              </div>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
 
     </Fragment>
   );

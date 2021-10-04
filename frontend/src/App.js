@@ -21,8 +21,6 @@ import setAuthToken from './utils/setAuthToken';
 import { loadUser } from './actions/auth';
 
 const App = () => {
-  console.log(localStorage.jwt)
-
   useEffect(() => {
     setAuthToken(localStorage.jwt);
     store.dispatch(loadUser());

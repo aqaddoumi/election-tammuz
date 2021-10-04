@@ -120,10 +120,11 @@ const RegisterForm = ({
 
   const onImageChange = (e) => {
     if (e.target.files.length > 0) {
-      setErrors({ ...errors, [e.target.name]: false });
+      //setErrors({ ...errors, [e.target.name]: false });
       setFormData({ ...formData, [e.target.name]: e.target.files[0] });
     }
   }
+
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -133,10 +134,12 @@ const RegisterForm = ({
 
     for (const err in errors) {
       if (formData[err] === '') {
-        if (err !== "secondPhoneNumber" && err !== 'familyNumber') {
+        if (err !== "secondPhoneNumber" && err !== 'familyNumber' &&
+            err !== "personalPicture" && err !== "nationalIdPicture" && err !== "nationalIdBackPicture" && 
+            err !== "residencyPicture" && err !== "rationPicture") {
           isAnyErrors = true;
           newErrors[err] = true;
-        }
+        } 
       } else {
         newErrors[err] = false;
       }
@@ -413,7 +416,7 @@ const RegisterForm = ({
             </FormDropDownField>
 
             <FormUploadField
-              label="صورة شخصية (صورة معاملات):*"
+              label="صورة شخصية (صورة معاملات):"
               name='personalPicture'
               onChange={onImageChange}
               isError={errors.personalPicture}
@@ -421,7 +424,7 @@ const RegisterForm = ({
             ></FormUploadField>
 
             <FormUploadField
-              label="صورة عن هوية الأحوال المدنية أو البطاقة الوطنية - صورة أمامية:*"
+              label="صورة عن هوية الأحوال المدنية أو البطاقة الوطنية - صورة أمامية:"
               name='nationalIdPicture'
               onChange={onImageChange}
               isError={errors.nationalIdPicture}
@@ -429,7 +432,7 @@ const RegisterForm = ({
             ></FormUploadField>
 
             <FormUploadField
-              label="صورة عن هوية الأحوال المدنية أو البطاقة الوطنية - صورة خلفية:*"
+              label="صورة عن هوية الأحوال المدنية أو البطاقة الوطنية - صورة خلفية:"
               name='nationalIdBackPicture'
               onChange={onImageChange}
               isError={errors.nationalIdBackPicture}
@@ -437,7 +440,7 @@ const RegisterForm = ({
             ></FormUploadField>
 
             <FormUploadField
-              label="صورة عن بطاقة السكن:*"
+              label="صورة عن بطاقة السكن:"
               name='residencyPicture'
               onChange={onImageChange}
               isError={errors.residencyPicture}
@@ -445,7 +448,7 @@ const RegisterForm = ({
             ></FormUploadField>
 
             <FormUploadField
-              label="صورة من البطاقة التموينية:*"
+              label="صورة من البطاقة التموينية:"
               name='rationPicture'
               onChange={onImageChange}
               isError={errors.rationPicture}

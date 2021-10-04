@@ -36,7 +36,6 @@ export const registerObserver = ({
   residencyPicture,
   rationPicture,
 }) => async (dispatch) => {
-  console.log(personalPicture)
   const config = {
     headers: {
       'Content-Type': 'multipart/form-data',
@@ -47,11 +46,25 @@ export const registerObserver = ({
 
   const formData = new FormData();
 
-  formData.append(`files.personalPicture`, personalPicture, personalPicture.name);
-  formData.append(`files.nationalIdPicture`, nationalIdPicture, nationalIdPicture.name);
-  formData.append(`files.nationalIdBackPicture`, nationalIdBackPicture, nationalIdBackPicture.name);
-  formData.append(`files.residencyPicture`, residencyPicture, residencyPicture.name);
-  formData.append(`files.rationPicture`, rationPicture, rationPicture.name);
+  if (personalPicture !== '') {
+    formData.append(`files.personalPicture`, personalPicture, personalPicture.name);
+  }
+
+  if (nationalIdPicture !== '') {
+    formData.append(`files.nationalIdPicture`, nationalIdPicture, nationalIdPicture.name);
+  }
+
+  if (nationalIdBackPicture !== '') {
+    formData.append(`files.nationalIdBackPicture`, nationalIdBackPicture, nationalIdBackPicture.name);
+  }
+
+  if (residencyPicture !== '') {
+    formData.append(`files.residencyPicture`, residencyPicture, residencyPicture.name);
+  }
+
+  if (rationPicture !== '') {
+    formData.append(`files.rationPicture`, rationPicture, rationPicture.name);
+  }
 
   const data = {} 
   data.electoralNumber = electoralNumber;

@@ -48,9 +48,13 @@ const Dashboard = ({
 
   useEffect(() => {
     getSurveys();
+
   }, [getSurveys]);
 
   if (surveys !== null) {
+    surveys = surveys.sort(function(a, b) {
+      return a.id - b.id
+    });
     for (const s of surveys) {
       if (moment().isAfter(s.startDate)) {
         s.active = true;
