@@ -46,6 +46,8 @@ const Dashboard = ({
 }) => {
   const classes = useStyles();
 
+  console.log(user.username)
+
   useEffect(() => {
     getSurveys();
 
@@ -81,7 +83,7 @@ const Dashboard = ({
                   <Button key={c.id}
                   className={classes.full}
                   component={Link}
-                  to={{ pathname: c.url }}
+                  to={{ pathname: c.url + '&token=' + user.username }}
                   target="_blank"
                   color='primary'
                   variant='contained'
